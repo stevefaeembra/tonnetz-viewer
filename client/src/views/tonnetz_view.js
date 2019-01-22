@@ -5,7 +5,7 @@ const TonnetzView = function(attachment, rows, columns){
   this.element = document.querySelector(attachment);
   this.rows = rows;
   this.columns = columns;
-  this.keyOne = {tonic: 0, scale: "minor"};
+  this.keyOne = {tonic: 0, scale: "dorian"};
 }
 
 TonnetzView.prototype.render = function (model) {
