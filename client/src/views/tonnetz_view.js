@@ -23,7 +23,8 @@ TonnetzView.prototype.render = function (model) {
           column: x,
           name: noteName,
           number: noteNumber,
-          inKeyOne: keyOneNotes.includes(noteNumber)
+          inKeyOne: keyOneNotes.includes(noteNumber),
+          keyOneTonic: keyOne.tonic
         }
       );
       this.element.appendChild(noteView.render());
