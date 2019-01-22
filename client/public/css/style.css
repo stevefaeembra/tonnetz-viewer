@@ -12,7 +12,7 @@ html {
 
 body {
   width:95%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 #grid {
@@ -36,6 +36,11 @@ body {
 
 .note--keyOne {
   background-image: linear-gradient(to bottom,#fdfcfb,#e2d1c3);
+  box-shadow: 4px 4px 6px rgba(0,0,0,.3);
+}
+
+.note--keyTwo {
+  border: 2px solid black;
   box-shadow: 4px 4px 6px rgba(0,0,0,.3);
 }
 
