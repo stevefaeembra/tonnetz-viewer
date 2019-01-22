@@ -9,7 +9,17 @@ const NoteView = function(data) {
 NoteView.prototype.render = function () {
   let divNote = document.createElement("div");
   divNote.className = `note note-${this.notenumber}`;
-  divNote.innerHTML = `${this.name}`;
+
+  let divNoteName = document.createElement("div");
+  divNoteName.className = `note-name`;
+  divNoteName.innerHTML = `${this.name}`;
+
+  let divNoteNumber = document.createElement("div");
+  divNoteNumber.className = `note-number`
+  divNoteNumber.innerHTML = `${this.notenumber}`;
+
+  divNote.appendChild(divNoteName);
+  divNote.appendChild(divNoteNumber);
   return divNote;
 };
 

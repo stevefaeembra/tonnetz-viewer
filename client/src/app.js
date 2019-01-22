@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM has loaded");
   const items = [
     new TonnetzModel(),
-    new TonnetzView("#grid", 15, 15)
+    new TonnetzView("#grid", 6, 15)
   ];
   items.forEach((item) => {
     item.bindEvents();

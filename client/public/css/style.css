@@ -13,8 +13,19 @@ html {
   display: grid;
   grid-template-columns: repeat(15,1fr);
   grid-template-rows: repeat(15,1fr);
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
 }
 
 .note {
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
+}
+
+.note-name {
+  font-size: 1.1rem;
+}
+.note-number {
+  font-size: 0.8rem;
 }
