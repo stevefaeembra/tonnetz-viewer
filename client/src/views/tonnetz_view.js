@@ -5,6 +5,7 @@ const TonnetzView = function(attachment, rows, columns){
   this.element = document.querySelector(attachment);
   this.rows = rows;
   this.columns = columns;
+  this.keyOne = {tonic: 0, scale: "minor"};
 }
 
 TonnetzView.prototype.render = function (model) {
@@ -13,12 +14,16 @@ TonnetzView.prototype.render = function (model) {
     for (let x=0;x<this.columns;x++) {
       let noteNumber = model.getNoteAt(y,x);
       let noteName = model.getNoteName(noteNumber);
+      let keyOne = this.keyOne;
+      let keyOneNotes = model.getScaleNotes(keyOne.tonic, keyOne.scale);
+      console.log(keyOneNotes);
       let noteView = new NoteView(
         {
           row: y,
           column: x,
           name: noteName,
-          number: noteNumber
+          number: noteNumber,
+          inKeyOne: keyOneNotes.includes(noteNumber)
         }
       );
       this.element.appendChild(noteView.render());
