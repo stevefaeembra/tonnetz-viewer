@@ -12,12 +12,15 @@ const NoteView = function(data) {
 NoteView.prototype.render = function () {
   let divNote = document.createElement("div");
   divNote.className = `note note-${this.notenumber}`;
-  if (this.inKeyOne) {
+
+  if (this.inKeyOne && this.inKeyTwo) {
+    divNote.className += " note--keyOneTwo";
+  } else if (this.inKeyOne) {
     divNote.className += " note--keyOne";
-  }
-  if (this.inKeyTwo) {
+  } else if (this.inKeyTwo) {
     divNote.className += " note--keyTwo";
   }
+  
   let divNoteName = document.createElement("div");
   divNoteName.className = `note-name`;
   divNoteName.innerHTML = `${this.name}`;

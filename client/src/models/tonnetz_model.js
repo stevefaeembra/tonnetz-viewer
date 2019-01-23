@@ -3,6 +3,7 @@ const PubSub = require("../helpers/pub_sub");
 const TonnetzModel = function() {
   this.notes = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
   this.scales = {
+    "booya":[0,4,8],
     "major":[0,2,4,5,7,9,11],
     "minor":[0,2,3,5,7,8,10],
     "dorian":[0,2,3,5,7,9,10],

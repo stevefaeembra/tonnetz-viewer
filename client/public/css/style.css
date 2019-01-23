@@ -35,12 +35,17 @@ body {
 }
 
 .note--keyOne {
-  background-image: linear-gradient(to bottom,#fdfcfb66,#e2d1c366);
+  background: rgba(0,255,0,.2);
   box-shadow: 4px 4px 6px rgba(0,0,0,.3);
 }
 
 .note--keyTwo {
-  background-image: linear-gradient(to top,#0000ff33,#f5efef66);
+  background-color: rgba(255,0,255,.2);
+  box-shadow: 4px 4px 6px rgba(0,0,0,.3);
+}
+
+.note--keyOneTwo {
+  background-color: red;
   box-shadow: 4px 4px 6px rgba(0,0,0,.3);
 }
 
