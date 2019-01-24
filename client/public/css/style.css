@@ -75,11 +75,15 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: space-between;
 }
 
 .keytonic-button,
 .keyscale-button {
   display: flex;
+  margin: 0.5rem;
+  padding: .5rem;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
