@@ -6,7 +6,7 @@ const TonnetzView = function(attachment, rows, columns){
   this.rows = rows;
   this.columns = columns;
   this.keyOne = {tonic: 0, scale: "major"};
-  this.keyTwo = {tonic: 5, scale: "major"};
+  this.keyTwo = {tonic: 6, scale: "ionian"};
 }
 
 TonnetzView.prototype.render = function (model) {
@@ -17,9 +17,9 @@ TonnetzView.prototype.render = function (model) {
       let noteName = model.getNoteName(noteNumber);
       let keyOne = this.keyOne;
       let keyTwo = this.keyTwo;
-      let keyOneNotes = model.getScaleNotes(keyOne.tonic, keyOne.scale);
-      let keyTwoNotes = model.getScaleNotes(keyTwo.tonic, keyTwo.scale);
-      console.log(keyOneNotes);
+      let keyOneNotes = keyOne.tonic === -1 ? [] : model.getScaleNotes(keyOne.tonic, keyOne.scale);
+      let keyTwoNotes = keyTwo.tonic === -1 ? [] : model.getScaleNotes(keyTwo.tonic, keyTwo.scale);
+
       let noteView = new NoteView(
         {
           row: y,
