@@ -1,19 +1,19 @@
 const Scales = {
-  "major":[0,2,4,5,7,9,11],
-  "minor":[0,2,3,5,7,8,10],
-  "dorian":[0,2,3,5,7,9,10],
-  "phygrian":[0,1,3,5,7,8,10],
-  "lydian":[0,2,4,6,7,9,11],
-  "mixolydian":[0,2,4,5,7,9,10],
-  "locrian":[0,1,3,5,6,8,10],
-  "minor-penta":[0,3,5,7,10],
-  "major-penta":[0,2,4,7,9],
-  "whole-tone":[0,2,4,6,8,10],
-  "acoustic":[0,2,4,6,7,9,10],
-  "octatonic-1":[0,2,3,5,6,8,9,11],
-  "octatonic-2":[0,1,3,4,6,7,9,10],
-  "ionian":[0,2,4,5,7,9,11], // same as major
-  "aeolian":[0,2,3,5,7,8,10], // same as minor
+  "Major":[0,2,4,5,7,9,11],
+  "Minor":[0,2,3,5,7,8,10],
+  "Dorian":[0,2,3,5,7,9,10],
+  "Phygrian":[0,1,3,5,7,8,10],
+  "Lydian":[0,2,4,6,7,9,11],
+  "Mixolydian":[0,2,4,5,7,9,10],
+  "Locrian":[0,1,3,5,6,8,10],
+  "Minor Penta":[0,3,5,7,10],
+  "Major Penta":[0,2,4,7,9],
+  "Whole Tone":[0,2,4,6,8,10],
+  "Acoustic":[0,2,4,6,7,9,10],
+  "Octatonic 1":[0,2,3,5,6,8,9,11],
+  "Octatonic 2":[0,1,3,4,6,7,9,10],
+  "Ionian":[0,2,4,5,7,9,11], // same as major
+  "Aeolian":[0,2,3,5,7,8,10], // same as minor
 };
 
 module.exports = Scales;

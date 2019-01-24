@@ -36,18 +36,20 @@ body {
 .note--keyOne {
   background-image: linear-gradient(to bottom,#f5f7fa,#c3cfe2);
   box-shadow: 4px 4px 6px rgba(0,0,0,.3);
+  border: 2px solid rgba(0,0,0,0);
 }
 
 .note--keyTwo {
   background-image: linear-gradient(to bottom,#fdfcfb,#e2d1c3);
   box-shadow: 4px 4px 6px rgba(0,0,0,.3);
+  border: 2px solid rgba(0,0,0,0);
 }
 
 .note--keyOneTwo {
   background-image:
     linear-gradient(to bottom,#f5f7fa,#c3cfe2),
     linear-gradient(to bottom,#fdfcfb,#e2d1c3);
-  background-blend-mode: color;
+  background-blend-mode: normal;
   border: 2px solid black;
   box-shadow: 0px 0px 4px black;
 }
@@ -62,6 +64,7 @@ body {
   font-weight: bolder;
   color: maroon;
 }
+
 .note-number {
   font-size: 0.8rem;
 }
