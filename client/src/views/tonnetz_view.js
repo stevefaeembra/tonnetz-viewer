@@ -5,8 +5,8 @@ const TonnetzView = function(attachment, rows, columns){
   this.element = document.querySelector(attachment);
   this.rows = rows;
   this.columns = columns;
-  this.keyOne = {tonic: 0, scale: "major"};
-  this.keyTwo = {tonic: 6, scale: "ionian"};
+  this.keyOne = {tonic: 0, scale: "minor"};
+  this.keyTwo = {tonic: -1, scale: "ionian"};
 }
 
 TonnetzView.prototype.render = function (model) {
