@@ -39,14 +39,14 @@ body {
 
 .note--keyOne {
   background-image: linear-gradient(to bottom,#f5f7fa,#c3cfe2);
-  box-shadow: 4px 4px 6px rgba(0,0,0,.3);
+  
   border: 2px solid rgba(0,0,0,0);
 }
 
 .note--keyTwo {
   background-image: linear-gradient(to bottom,#fdfcfb,#e2d1c3);
   box-shadow: 4px 4px 6px rgba(0,0,0,.3);
-  border: 2px solid rgba(0,0,0,0);
+  border: 2px solid darkgrey;
 }
 
 .note--keyOneTwo {
