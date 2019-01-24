@@ -1,12 +1,13 @@
 const PubSub = require("../helpers/pub_sub");
 const NoteView = require("./note_view");
+const Notes = require("../models/notes");
 const TonnetzModel = require("../models/tonnetz_model");
 
 const TonnetzView = function(attachment, rows, columns){
   this.element = document.querySelector(attachment);
   this.rows = rows;
   this.columns = columns;
-  this.keyOne = {tonic: 0, scale: "minor"};
+  this.keyOne = {tonic: 0, scale: "major"};
   this.keyTwo = {tonic: -1, scale: "ionian"};
 }
 
@@ -43,9 +44,17 @@ TonnetzView.prototype.bindEvents = function () {
     let model = event.detail.model;
     this.render(model);
   });
+  PubSub.subscribe("tonicChange", (event) => {
+    PubSub.signForDelivery(this,event);
+    const data = event.detail;
+    const slot = data.slot;
+    const notename = data.notename;
+    const notenumber = Notes.indexOf(notename);
+    this.keyOne = {tonic: notenumber, scale: this.keyOne.scale};
+    this.render(new TonnetzModel());
+  })
   PubSub.subscribe("scaleChange", (event) => {
     PubSub.signForDelivery(this,event);
-    //debugger;
     const data = event.detail;
     const slot = data.slot;
     const scalename = data.scalename;
