@@ -65,13 +65,15 @@ body {
 }
 
 
-#keyonetonicbuttons {
+#keyonetonicbuttons,
+#keytwotonicbuttons {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-auto-flow: column;
 }
 
-#keyonescalebuttons {
+#keyonescalebuttons,
+#keytwoscalebuttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

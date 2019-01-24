@@ -50,7 +50,11 @@ TonnetzView.prototype.bindEvents = function () {
     const slot = data.slot;
     const notename = data.notename;
     const notenumber = Notes.indexOf(notename);
-    this.keyOne = {tonic: notenumber, scale: this.keyOne.scale};
+    if (slot==="1") {
+      this.keyOne = {tonic: notenumber, scale: this.keyOne.scale};
+    } else {
+      this.keyTwo = {tonic: notenumber, scale: this.keyTwo.scale};
+    }
     this.render(new TonnetzModel());
   })
   PubSub.subscribe("scaleChange", (event) => {
@@ -58,8 +62,14 @@ TonnetzView.prototype.bindEvents = function () {
     const data = event.detail;
     const slot = data.slot;
     const scalename = data.scalename;
-    this.keyOne = {tonic: this.keyOne.tonic, scale: scalename};
+
+    if (slot==="1") {
+      this.keyOne = {tonic: this.keyOne.tonic, scale: scalename};
+    } else {
+      this.keyTwo = {tonic: this.keyTwo.tonic, scale: scalename};
+    }
     this.render(new TonnetzModel());
+
   })
 };
 

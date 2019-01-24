@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     new TonnetzModel(),
     new TonnetzView("#grid", 6, 15),
     new KeyTonicButtonsView(1,"#keyonetonicbuttons"),
-    new KeyScaleButtonsView(1,"#keyonescalebuttons")
+    new KeyScaleButtonsView(1,"#keyonescalebuttons"),
+    new KeyTonicButtonsView(2,"#keytwotonicbuttons"),
+    new KeyScaleButtonsView(2,"#keytwoscalebuttons")
   ];
   items.forEach((item) => {
     item.bindEvents();
