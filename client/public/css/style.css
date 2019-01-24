@@ -70,10 +70,12 @@ body {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-auto-flow: column;
+  border-top: 5px solid black;
 }
 
 #keyonescalebuttons,
 #keytwoscalebuttons {
+  border-top: 2px solid lightgrey;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -90,4 +92,15 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid black;
+}
+
+.ebony {
+  background-image : linear-gradient(to bottom, #434343,#000000);
+  color: white;
+  background-blend-mode: lighten;
+}
+
+.close {
+  background-color: pink;
+  color: black;
 }

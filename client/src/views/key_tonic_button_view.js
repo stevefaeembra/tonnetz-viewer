@@ -8,7 +8,13 @@ const KeyTonicButtonView = function(slot, noteNumber, noteName) {
 
 KeyTonicButtonView.prototype.render = function () {
   let divButton = document.createElement("div");
-  divButton.className = "keytonic-button";
+  divButton.className = `keytonic-button`;
+  if ([1,3,6,8,10].includes(this.noteNumber)) {
+    divButton.className += " ebony";
+  }
+  if (this.noteNumber===-1) {
+    divButton.className += " close";
+  }
   divButton.innerHTML = this.noteName;
   divButton.id = `keytonic_${this.slot}_${this.noteName}`;
   divButton.innerHTML = this.noteName;
