@@ -91,6 +91,7 @@ body {
 .keytonic-button,
 .keyscale-button {
   display: flex;
+  font-size: .7rem;
   margin: 0.5rem;
   padding: .5rem;
   border-radius: .5rem;
