@@ -13,7 +13,10 @@ KeyTonicButtonsView.prototype.render = function () {
   for (var i=0; i<12; i++) {
     const keyButton = new KeyTonicButtonView(this.slot, i, Notes[i]);
     this.element.appendChild(keyButton.render());
-  }
+  };
+  // add "Off" button
+  const offButton = new KeyTonicButtonView(this.slot, -1, "X");
+  this.element.appendChild(offButton.render());
 };
 
 KeyTonicButtonsView.prototype.bindEvents = function () {
